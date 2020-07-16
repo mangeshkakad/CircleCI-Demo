@@ -7,19 +7,43 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: sleep 5
-  test:
+  testa:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A more familiar hi"
+      - run: echo "I am running test A"
       - run: sleep 5
+  testb:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "I am running test B"
+      - run: sleep 5
+  deploy:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "I am Deploying code into Production"
+      - run: sleep 5
+      
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
-      - test:
+      - testa:
           # only run this job if build succeeds
           requires:
             - build 
+      - testb:
+          # only run this job if build succeeds
+          requires:
+            - build 
+      - deploy:
+          # only run this job if build succeeds
+          requires:
+            - testa
+            - testb
