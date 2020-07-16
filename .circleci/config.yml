@@ -6,9 +6,9 @@ jobs:
     steps:
       - checkout
       - run: echo "A Hello WORLD"
-   test:
+  test:
     docker:
       - image: circleci/ruby:2.41
-     steps:
+    steps:
       - checkout
       - run: echo "SHREE GANESH SHREE GANESH"
