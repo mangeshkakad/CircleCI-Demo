@@ -51,5 +51,4 @@ workflows:
             - testb
       - deploy:
           requires:
-            - testa
-            - testb
+            - hold
