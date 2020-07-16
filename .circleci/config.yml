@@ -1,9 +1,7 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.4.1
-      - image: mangeshkdocker/monolithic-shop:latest
+    Machine: true
     steps:
       - checkout
       - run: mkdir -p my_workspace
