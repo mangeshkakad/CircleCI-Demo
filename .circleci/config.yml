@@ -2,6 +2,7 @@ version: 2
 jobs:
   build:
     Machine: true
+      - image: 
     steps:
       - checkout
       - run: mkdir -p my_workspace
