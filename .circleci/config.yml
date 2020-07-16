@@ -1,7 +1,9 @@
-version: 2
 jobs:
   build:
     macos:
-      - xcode: "9.0"
-  steps:
-  - run: xcodebuild -version
+      xcode: 11.3.0
+      
+    steps:
+      # Commands will execute in macOS container
+      # with Xcode 11.3 installed
+      - run: xcodebuild -version
