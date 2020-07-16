@@ -8,7 +8,7 @@ jobs:
       - run: echo "A Hello WORLD"
   test:
     docker:
-      - image: circleci/ruby:2.41
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "SHREE GANESH SHREE GANESH"
