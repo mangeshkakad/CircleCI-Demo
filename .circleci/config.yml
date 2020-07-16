@@ -12,3 +12,8 @@ jobs:
     steps:
       - checkout
       - run: echo "SHREE GANESH SHREE GANESH"
+workflows:
+  version: 2
+  build_and_test:
+    - build
+    - test
