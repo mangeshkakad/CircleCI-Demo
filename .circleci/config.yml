@@ -1,6 +1,7 @@
 version: 2
 jobs:
-  macos:
-    - xcode: "9.0"
+  build:
+    macos:
+      - xcode: "9.0"
   steps:
    - run: xcodebuild version
