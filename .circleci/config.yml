@@ -5,7 +5,7 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: nocommand echo "A first hello"
+      - run: echo "A first hello"
       - run: sleep 5
   test:
     docker:
