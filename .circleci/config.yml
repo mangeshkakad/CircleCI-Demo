@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: https://hub.docker.com/repository/docker/mangeshkdocker/monolithic-shop
+      - image: docker pull mangeshkdocker/monolithic-shop:latest
     steps:
       - checkout
       - run: notacommandN
