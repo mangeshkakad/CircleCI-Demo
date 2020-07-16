@@ -47,8 +47,8 @@ workflows:
             - build
       - hold:
         type: approval
-        requires:
-          - testb
+          requires:
+            - testb
       - deploy:
           requires:
             - testa
