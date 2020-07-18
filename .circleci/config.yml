@@ -5,6 +5,8 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
+      - setup_remote_docker:
+        docker_layer_caching: true
       - run: echo "A first hello"
       - run: sleep 5
       
@@ -12,7 +14,6 @@ jobs:
   testa:
     docker:
       - image: circleci/ruby:2.4.1
-    parallelism: 4
     steps:
       - checkout
       - run: echo "A more familiar hi"
